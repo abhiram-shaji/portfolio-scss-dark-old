@@ -1,0 +1,134 @@
+.featured-project {
+  padding-bottom: 2rem;
+
+  h1,
+  h2,
+  p {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: $secondary-color;
+    padding: 5vh;
+  }
+
+  h2 {
+    font-size: 2rem;
+    padding: 2vh;
+  }
+
+  p {
+    font-size: 1.1rem;
+    padding: 1vh;
+  }
+
+  #aowf-bg {
+    height: 30vh;
+    width: 100%;
+    background: 
+      linear-gradient(to right, rgba($primary-color, 0.9), rgba($primary-color, 0.3)), 
+      url("../img/aowf/aowf-bg.png") center top;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.aowf-influence {
+  padding: 2rem 20vw;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.75), 
+    rgba(0, 0, 0, 0.75)
+  ), $secondary-color;    
+
+}
+
+
+.aowf-about,
+.aowf-origins,
+.aowf-mission {
+  padding: 2rem 20vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  align-items: center;
+
+  // Responsive design for smaller screens
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+
+  img {
+    width: 100%; 
+    max-width: 500px; 
+    height: auto; 
+    margin: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; // Transition for smooth effect
+
+  &:hover {
+    transform: scale(1.05); // Slightly scale up the image on hover
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.15); 
+  }
+
+  }
+}
+
+.aowf-mission {
+    background: linear-gradient(
+    rgba(0, 0, 0, 0.75), 
+    rgba(0, 0, 0, 0.75)
+  ), $secondary-color; 
+}
+
+// Gallery section
+#aowf-gallery {
+  padding: 2rem 20vw;
+
+  img {
+    width: 20vw;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05); // Slightly increase the size of the image
+      opacity: 0.7; // Slightly reduce the opacity
+      box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.15); 
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+  }
+
+  #gal-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+
+    // Responsive design for smaller screens
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    transform:
+      rotate(90deg)
+      translate(-3rem, -5rem);
+  }
+
+}
