@@ -29,6 +29,19 @@
     .text-secondary {
       padding-bottom: 1rem;
     }
+
+    p {
+      padding: 0 1rem; // Default padding for small screens
+      line-height: 1.6;
+
+      @media screen and (min-width: 768px) {
+        padding: 0 3rem; // Increase horizontal padding for tablets
+      }
+
+      @media screen and (min-width: 1200px) {
+        padding: 0 5rem; // Further increase for larger screens
+      }
+    }
   }
 
   .jobs {
@@ -62,5 +75,4 @@
       rotate(90deg)
       translate(-3rem, -5rem);
   }
-  
 }
